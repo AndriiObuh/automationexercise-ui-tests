@@ -1,31 +1,32 @@
 import allure
 from pages.base_page import BasePage
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class HomePage(BasePage):
-    URL = "https://automationexercise.com"
+    URL = "https://automationexercise.com/"
 
     def __init__(self, driver: WebDriver):
-        """Initialize HomePage with a WebDriver instance.
-        :param driver: Selenium WebDriver instance"""
+        """Initialize HomePage with a WebDriver instance."""
         super().__init__(driver)
 
+    @allure.step("Open Home Page")
     def open(self) -> None:
         """Open the home page URL in the browser."""
         super().open(self.URL)
 
-    @allure.step("Click the 'Home' menu item")
-    def click_home(self) -> None:
+    @allure.step("Check if home page is visible")
+    def is_home_page(self) -> bool:
+        """Return True if home page is visible (specific element is present)."""
+        return self.is_visible(self.HOME_SLIDER)
+
+    @allure.step("Check if current URL is the home page URL")
+    def is_home_url(self) -> bool:
         """
-        Click the 'Home' link in the header menu.
+        Verify that the current page URL matches the home page URL.
+        :return: True if the current URL is the home page URL, False otherwise.
         """
-        self.click_header_menu(self.HEADER_HOME)
-
-
-
-
+        return self.driver.current_url == self.URL
 
 
 
