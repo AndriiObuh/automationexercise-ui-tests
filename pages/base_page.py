@@ -102,4 +102,8 @@ class BasePage:
         element = self.element_is_visible(locator)
         Select(element).select_by_visible_text(text)
 
-
+    @allure.step('Move cursor to element')
+    def action_move_to_element(self, element):
+        action = ActionChains(self.driver)
+        action.move_to_element(element)
+        action.perform()
