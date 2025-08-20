@@ -21,3 +21,11 @@ class Person:
     year: str = None
     gender: str = None
 
+
+@dataclass
+class CartDetails:
+     name: str = None
+     number: str = None
+     cvc: str = None
+     month: str = None
+     year: str = None

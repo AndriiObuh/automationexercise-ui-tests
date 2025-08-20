@@ -17,6 +17,8 @@ class CartPage(BasePage):
     PRODUCT_PRICE = (By.XPATH, ".//td[@class='cart_price']/p")
     PRODUCT_QUANTITY = (By.XPATH, ".//td[@class='cart_quantity']/button")
     PRODUCT_TOTAL = (By.XPATH, ".//td[@class='cart_total']/p")
+    PROCEED_TO_CHECKOUT_BTN = (By.XPATH, "//a[@class='btn btn-default check_out']")
+    REGISTER_LOGIN_BTN = (By.XPATH, "//div[@id='checkoutModal']//a[@href='/login']")
 
     def __init__(self, driver: WebDriver):
         """Initialize LoginPage with a WebDriver instance."""
@@ -68,6 +70,14 @@ class CartPage(BasePage):
         products = self.get_products()
         products_detail = self.get_product_details(products[index])
         return products_detail
+
+    @allure.step("Click 'Proceed To Checkout' button")
+    def click_proceed_to_checkout(self) -> None:
+        self.element_is_clickable(self.PROCEED_TO_CHECKOUT_BTN).click()
+
+    @allure.step("Click 'Register / Login' button")
+    def click_register_login(self) -> None:
+        self.element_is_clickable(self.REGISTER_LOGIN_BTN).click()
 
 
 

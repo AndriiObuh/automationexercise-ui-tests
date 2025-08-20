@@ -1,4 +1,4 @@
-from data.data import Person
+from data.data import Person, CartDetails
 from faker import Faker
 import random
 
@@ -25,4 +25,13 @@ def generated_person():
         day=str(random.randint(1, 28)),
         month=str(random.randint(1, 12)),
         year=str(random.randint(1900, 2021)),
+    )
+
+def generator_cart_detail():
+    yield CartDetails(
+        name=faker_en.credit_card_full(),
+        number=faker_en.credit_card_number(),
+        cvc=faker_en.credit_card_security_code(),
+        month=str(random.randint(1, 12)),
+        year=str(random.randint(2000, 2025)),
     )
