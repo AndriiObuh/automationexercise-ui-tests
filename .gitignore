@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache
+*.env
+*.venv
+*.egg
+*.egg-info
+dist/
+build/
+
+# IDEs
+.idea/
+*.iml
+
+
+# Logs
+logs/
+*.log
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Docker
+*.dockerfile
