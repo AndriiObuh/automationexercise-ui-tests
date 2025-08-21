@@ -46,8 +46,7 @@ class SignupPage(BasePage):
         """Open the login page URL."""
         super().open(self.URL)
 
-    def fill_registration_form(self):
-        person = next(generated_person())
+    def fill_registration_form(self, person):
         password = person.password
         first_name = person.first_name
         last_name = person.last_name
@@ -84,6 +83,7 @@ class SignupPage(BasePage):
         self.element_is_visible(self.NEWSLETTER_CHECKBOX).click()
         self.element_is_visible(self.OFFERS_CHECKBOX).click()
         self.element_is_visible(self.CREATE_ACCOUNT_BUTTON).click()
+        return person
 
     @allure.step("Check if 'ACCOUNT CREATED!' message is visible")
     def is_account_created(self) -> bool:

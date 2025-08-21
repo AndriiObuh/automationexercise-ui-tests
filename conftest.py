@@ -7,12 +7,16 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.webdriver import WebDriver
 
+from generator.generator import generated_person
+
+
 # --- WebDriver fixture ---
 @pytest.fixture(scope="function")
 def driver() -> WebDriver:
     """A fixture for launching and closing the browser"""
     options = Options()
     options.add_argument("--headless=new")  # Headless mode for CI/Docker
+    options.add_argument("--incognito")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
@@ -20,6 +24,7 @@ def driver() -> WebDriver:
     options.add_argument(f"--user-data-dir=/tmp/chrome-data-{os.getpid()}")  # Unique profile per session
 
     driver = webdriver.Chrome(options=options)
+    driver.delete_all_cookies()
     yield driver
     driver.quit()
 
@@ -70,7 +75,10 @@ def pytest_runtest_makereport(item, call):
         else:
             logger.error(f"[FAILED TEST] {test_name} failed. No WebDriver instance found for screenshot.")
 
-
+@pytest.fixture
+def person_data():
+    """Generate user data once per test"""
+    return next(generated_person())
     
 
 

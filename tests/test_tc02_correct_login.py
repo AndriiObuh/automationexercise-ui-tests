@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 class TestLoginPage:
 
-    def test_correct_login_user(self, driver: WebDriver):
+    def test_correct_login_user(self,  driver: WebDriver, person_data):
         home = HomePage(driver)
         login = LoginPage(driver)
         signup = SignupPage(driver)
@@ -26,7 +26,13 @@ class TestLoginPage:
         assert login.is_login_header_visible(), "'Login to your account' header is not visible"
 
         # 6. Enter correct email address and password
-        login.fill_login_form("and@ex.com", "123")
+        login.fill_signup_form(person_data.name, person_data.email)
+        login.click_signup_button()
+        signup.fill_registration_form(person_data)  # returns generated person
+        signup.click_continue_button()
+        home.click_header_menu(home.HEADER_LOGOUT)
+        login.open()
+        login.fill_login_form(person_data.email, person_data.password)
 
         # 7. Click 'login' button
         login.click_login_button()

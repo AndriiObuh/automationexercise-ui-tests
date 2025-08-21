@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 class TestSignupPage:
 
-    def test_register_user(self, driver: WebDriver):
+    def test_register_user(self, driver: WebDriver, person_data):
         home = HomePage(driver)
         login = LoginPage(driver)
         signup = SignupPage(driver)
@@ -26,7 +26,7 @@ class TestSignupPage:
         assert login.is_signup_header_visible(), "'New User Signup!' header is not visible"
 
         # 6. Enter name and email
-        login.fill_signup_form()
+        login.fill_signup_form(person_data.name, person_data.email)
 
         # 7. Click 'Signup' button
         login.click_signup_button()
@@ -35,7 +35,7 @@ class TestSignupPage:
         assert login.is_signup_success_visible(), "'Enter Account Information' header is not visible"
 
         # 9-12. Fill all account details on SignupPage
-        signup.fill_registration_form()
+        signup.fill_registration_form(person_data)
 
         # 13-14. Click 'Create Account' and verify 'ACCOUNT CREATED!'
         assert signup.is_account_created(), "'Account Created!' header is not visible"

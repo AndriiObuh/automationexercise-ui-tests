@@ -12,7 +12,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 class TestPlaceOrderAndRegisterWhileCheckout:
 
-    def test_place_order_register_while_checkout(self, driver: WebDriver):
+    def test_place_order_register_while_checkout(self, driver: WebDriver, person_data):
         home = HomePage(driver)
         login = LoginPage(driver)
         signup = SignupPage(driver)
@@ -22,6 +22,7 @@ class TestPlaceOrderAndRegisterWhileCheckout:
         checkout = CheckoutPage(driver)
 
         # 1-2. Launch browser and navigate to home page
+        driver.delete_all_cookies()
         home.open()
         # 3. Verify that home page is visible
         assert home.is_home_page(), "Home page is not visible"
@@ -36,9 +37,9 @@ class TestPlaceOrderAndRegisterWhileCheckout:
         cart.click_proceed_to_checkout()
         cart.click_register_login()
         # 9–11: Signup and account creation
-        login.fill_signup_form()
+        login.fill_signup_form(person_data.name, person_data.email)
         login.click_signup_button()
-        signup.fill_registration_form()
+        signup.fill_registration_form(person_data)
         assert signup.is_account_created(), "'Account Created!' header is not visible"
         signup.click_continue_button()
         assert signup.is_logged_in_as_visible(), "'Logged in as username' is not visible"
