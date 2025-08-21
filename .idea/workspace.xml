@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="744bb8a2-6c2b-4725-be08-c1a90d4ede21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ui-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ui-tests.yml" afterDir="false" />
-    </list>
+    <list default="true" id="744bb8a2-6c2b-4725-be08-c1a90d4ede21" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
