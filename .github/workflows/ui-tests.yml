@@ -26,9 +26,7 @@ jobs:
 
       # 4. Run tests inside Docker
       - name: Run tests in Docker
-        run: docker run --rm \
-          -v ${{ github.workspace }}/allure-results:/app/allure-results \
-          automationexercise-ui-tests:latest
+        run: docker run --rm -v ${{ github.workspace }}/allure-results:/app/allure-results automationexercise-ui-tests:latest
 
       # 5. Upload Allure results as artifact
       - name: Upload Allure results
