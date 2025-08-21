@@ -7,3 +7,4 @@
 2025-08-21 11:31:52,309 [ERROR] [FAILED TEST] test_place_order_register_while_checkout failed. Screenshot saved: screenshots/test_place_order_register_while_checkout_2025-08-21_11-31-52.png
 2025-08-21 12:58:02,480 [ERROR] [FAILED TEST] test_contact_us_form failed. Screenshot saved: screenshots/test_contact_us_form_2025-08-21_12-58-02.png
 2025-08-21 13:00:21,512 [ERROR] [FAILED TEST] test_contact_us_form failed. Screenshot saved: screenshots/test_contact_us_form_2025-08-21_13-00-21.png
+2025-08-21 13:39:04,954 [ERROR] [FAILED TEST] test_scroll_up_down failed. Screenshot saved: screenshots/test_scroll_up_down_2025-08-21_13-39-04.png

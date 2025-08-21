@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744bb8a2-6c2b-4725-be08-c1a90d4ede21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/files/test_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/contact_us_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_tc06_contact_us.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_tc09_search_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_tc26_scroll_up_down.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_tc14_place_order_register_while_checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_tc14_place_order_register_while_checkout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
