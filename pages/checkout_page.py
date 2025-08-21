@@ -12,6 +12,7 @@ class CheckoutPage(BasePage):
     REVIEW_ORDER = (By.XPATH, "//h2[contains(text(), 'Review Your Order')]")
     COMMENT_TEXTAREA = (By.XPATH, "//textarea[@name='message']")
     PLACE_ORDER_BUTTON = (By.XPATH, "//a[@href='/payment']")
+    TOTAL_AMOUNT = (By.XPATH, "//tr[.//b[text()='Total Amount']]//p[@class='cart_total_price']")
 
     def __init__(self, driver: WebDriver):
         """Initialize LoginPage with a WebDriver instance."""
@@ -33,4 +34,9 @@ class CheckoutPage(BasePage):
     @allure.step("Click 'Place Order' button")
     def click_place_order(self) -> None:
         self.element_is_clickable(self.PLACE_ORDER_BUTTON).click()
+
+    @allure.step("Get total amount from checkout page")
+    def get_total_amount(self) -> str:
+        """Return the total amount text (e.g., 'Rs. 1400')."""
+        return self.element_is_visible(self.TOTAL_AMOUNT).text
 

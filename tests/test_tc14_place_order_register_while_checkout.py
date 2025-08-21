@@ -48,6 +48,9 @@ class TestPlaceOrderAndRegisterWhileCheckout:
         cart.click_proceed_to_checkout()
         # 14. Verify Address Details and Review Your Order
         checkout.is_address_and_review_visible(), "Address Details and Review Your Order are not visible"
+        # Additional check to see if the total amount is displayed correctly
+        total = checkout.get_total_amount()
+        assert total == "Rs. 500", f"Unexpected total amount: {total}"
         # 15. Enter description in comment text area and click 'Place Order'
         checkout.enter_comment("My comment")
         checkout.click_place_order()

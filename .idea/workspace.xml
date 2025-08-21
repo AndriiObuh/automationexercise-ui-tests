@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744bb8a2-6c2b-4725-be08-c1a90d4ede21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/checkout_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/payment_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_tc14_place_order_register_while_checkout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/test_file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/contact_us_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_tc06_contact_us.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_tc09_search_product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator/generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_tc14_place_order_register_while_checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_tc14_place_order_register_while_checkout.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for tests.test_login_page.TestLoginPage.test_login_negative.executor": "Run",
-    "Python tests.Python tests for tests.test_login_page.TestLoginPage.test_login_positive.executor": "Run",
-    "Python tests.Python tests for tests.test_login_page.TestLoginPage.test_signup_negative.executor": "Run",
-    "Python tests.Python tests for tests.test_login_page.TestLoginPage.test_signup_positive.executor": "Run",
-    "Python tests.Python tests for tests.test_login_page.test_signup_success.executor": "Run",
-    "Python tests.Python tests in test_tc14_place_order_register_while_checkout.py.executor": "Run",
-    "Python.login_page.executor": "Run",
-    "Python.signup_page.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for tests.test_login_page.TestLoginPage.test_login_negative.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_login_page.TestLoginPage.test_login_positive.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_login_page.TestLoginPage.test_signup_negative.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_login_page.TestLoginPage.test_signup_positive.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_login_page.test_signup_success.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_tc14_place_order_register_while_checkout.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.login_page.executor&quot;: &quot;Run&quot;,
+    &quot;Python.signup_page.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.Python tests in test_tc14_place_order_register_while_checkout.py">
     <configuration name="login_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="automationexercise-ui-tests" />
