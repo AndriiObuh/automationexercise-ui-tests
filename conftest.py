@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 # --- WebDriver fixture ---
-@pytest.fixture
+@pytest.fixture(scope="function")
 def driver() -> WebDriver:
     """A fixture for launching and closing the browser"""
     options = Options()
